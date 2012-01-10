@@ -5,6 +5,10 @@ These scripts are designed to let internal and external users change their Activ
 
 For it to work securely _you must use SSL on the webserver and for the LDAP connection_.
 
+It looks like this:
+
+![password-self-service](http://i.imgur.com/H6If1.png)
+
 Configuration
 -------------
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+  <title>Change your Contoso password</title>
+
+  <link rel="stylesheet" type="text/css" href="/passwords.css" />
+
+  <script type="text/javascript" language="javascript" src="js/jquery.min.js"></script>
+
+  <script type="text/javascript" language="javascript" src="js/jquery.color.js"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.corner.js"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.form.js"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.hint.min.js"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.metadata.js"></script>
+
+  <script type="text/javascript" language="javascript" src="js/parseuri.js"></script>
+
+  <script type="text/javascript" language="javascript" src="passwords.js"></script>
+ </head>
+
+ <body>
+  <div id="description" class="rounded">
+   <p>Please use the form below to change the password for your Contoso account.</p>
+
+   <p style="margin-top: 1em;">Your account will not be fully enabled until you change your password.</p>
+  </div>
+
+  <div id="password-form" class="rounded">
+   <div id="password-entry">
+    <form method="POST" id="password-entry-form" action="/password.py">
+     <input title="Username" type="text" id="username" name="username" />
+
+     <input title="Old password" type="password" id="old_password" name="old_password" />
+
+     <input title="New password" type="password" id="new_password" name="new_password" />
+     <input title="Verify" type="password" id="new_password_verify" name="new_password_verify" />
+
+     <div id="validation">
+      <div id="requirements-container">
+       <div id="general-container">
+        General requirements:
+
+        <ul id="requirements"></ul>
+       </div>
+
+       <div id="requirement-classes-container">
+        You must use 3 of these 4 character classes:
+
+        <ul id="requirement-classes"></ul>
+       </div>
+      </div>
+
+      <div id="match-requirement">
+       The verification field does not match your new password.
+      </div>
+
+      <div id="pass-container">
+       Your new password meets the requirements.
+      </div>
+     </div>
+
+     <input type="submit" value="Change my password!" />
+    </form>
+   </div>
+
+   <div id="password-form-result-wrapper">
+    <div id="password-form-result"></div>
+
+    <p id="password-try-again-wrapper">Please <a href="javascript:void(0);" id="password-try-again">try again</a>.</p>
+   </div>
+  </div>
+ </body>
+</html>
